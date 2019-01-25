@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1602258404954204434}
   - component: {fileID: 4136967886389195384}
   - component: {fileID: 4019920027254396261}
+  - component: {fileID: 2809797134605466903}
   m_Layer: 0
   m_Name: house_obs
   m_TagString: Untagged
@@ -92,12 +93,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5198163a89d50f48b22d57bf7408faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightsOff: {fileID: 0}
-  lightsOn: {fileID: 0}
-  minWait: 2
-  maxWait: 7
-  chance: 0.01
-  onWaitMin: 1
-  onWaitMax: 3
-  checkFreq: 1
-  lightUp: 0
+  lightsOff: {fileID: 21300000, guid: 8c5cfe059cae9154e9bf4c59183f438a, type: 3}
+  lightsOn: {fileID: 21300000, guid: eefac282aa00b2e4cb7b68dbf771a9ef, type: 3}
+  minWait: 5
+  maxWait: 10
+  chance: 0.001
+  onWaitMin: 3
+  onWaitMax: 7
+  checkFreq: 2
+--- !u!95 &2809797134605466903
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433410002291201319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e82e63d22b88b3b449361b419f018092, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
