@@ -16,6 +16,8 @@ public class HouseObstacle : MonoBehaviour
     [SerializeField]
     float minWait = 1.0f;           //minimum wait until light can come on again
     [SerializeField]
+    float maxWait = 10.0f;           //maximum wait until light can come on again
+    [SerializeField]
     float chance = 0.1f;            //chance of light coming on
     [SerializeField]
     float onWaitMin = 0.5f;         //minimum wait until light turns off
@@ -28,6 +30,7 @@ public class HouseObstacle : MonoBehaviour
     public bool lightUp = false;
     private float timeElapsed = 0.0f;
     private float randomOnTime = 0.0f;
+    private float totalWait = 0.0f;
 
     void Start()
     {
@@ -40,7 +43,7 @@ public class HouseObstacle : MonoBehaviour
         timeElapsed += Time.deltaTime;
 
         //Check if light goes on
-        if (!lightUp && timeElapsed > minWait)
+        if (!lightUp && timeElapsed > totalWait)
         {
             StartCoroutine(Light());
         }
@@ -51,6 +54,7 @@ public class HouseObstacle : MonoBehaviour
                 timeElapsed = 0.0f;
                 lightUp = false;
                 sr.sprite = lightsOff;
+                totalWait = Random.Range(minWait, maxWait);
             }
 
         }
