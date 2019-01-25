@@ -8,6 +8,7 @@ public class ControlHandler : MonoBehaviour
     public bool MoveLeft { get; set; }
     public bool MoveRight { get; set; }
     public bool Sprint { get; set; }
+    public bool Crouch { get; set; }
 
     // Start is called before the first frame update
     void Start ()
@@ -48,6 +49,15 @@ public class ControlHandler : MonoBehaviour
             Sprint = false;
         }
 
+        if (Input.GetAxis ("Crouch") > 0)
+        {
+            Crouch = true;
+        }
+        else
+        {
+            Crouch = false;
+        }
+
         //log states
         if (MoveLeft)
             Debug.Log ("LEFT");
@@ -55,5 +65,7 @@ public class ControlHandler : MonoBehaviour
             Debug.Log ("RIGHT");
         if (Sprint)
             Debug.Log ("SPRINTING");
+        if (Crouch)
+            Debug.Log ("CROUGHING");
     }
 }

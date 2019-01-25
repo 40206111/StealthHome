@@ -10,34 +10,32 @@ public class Player_controls : MonoBehaviour
     const float movement_speed = 2.0f;
     const float sprint_speed = 3.0f;
 
-
-
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ()
     {
-        if (ch.right)
+        if (ch.MoveRight)
         {
             float speed = movement_speed;
-            if (ch.sprint)
+            if (ch.Sprint)
                 speed = sprint_speed;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(speed * Time.deltaTime, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed * Time.deltaTime, gameObject.GetComponent<Rigidbody2D> ().velocity.y);
         }
-        if (ch.left)
+        if (ch.MoveLeft)
         {
             float speed = movement_speed;
-            if (ch.sprint)
+            if (ch.Sprint)
                 speed = sprint_speed;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed * Time.deltaTime, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed * Time.deltaTime, gameObject.GetComponent<Rigidbody2D> ().velocity.y);
         }
-        if (ch.crouch)
+        if (ch.Crouch)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+            gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0.0f, 0.0f);
             /////////////// Play animation for coruching;
         }
     }
