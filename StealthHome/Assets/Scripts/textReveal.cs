@@ -8,10 +8,16 @@ public class textReveal : MonoBehaviour
     // Text
     private TextMeshPro txt;
 
+    [SerializeField]
+    private float wait = 0.05f;
+    [SerializeField]
+    private float waitBeforeBegin = 0.0f;
+
     private void Start()
     {
         //get Text
         txt = gameObject.GetComponent<TextMeshPro>();
+        txt.maxVisibleCharacters = 0;
         //Start Reveal
         StartCoroutine(Go());
     }
@@ -19,6 +25,7 @@ public class textReveal : MonoBehaviour
     //Reveal
     IEnumerator Go()
     {
+        yield return new WaitForSeconds(waitBeforeBegin);
 
         int totVis = txt.textInfo.characterCount;
         int counter = 0;
@@ -33,7 +40,7 @@ public class textReveal : MonoBehaviour
             txt.maxVisibleCharacters = visCount;
 
             counter++;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(wait);
         }
 
 

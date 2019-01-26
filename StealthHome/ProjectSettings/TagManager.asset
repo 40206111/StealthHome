@@ -6,6 +6,8 @@ TagManager:
   tags:
   - AlertBar
   - Controls
+  - Camera
+  - icons
   layers:
   - Default
   - TransparentFX
