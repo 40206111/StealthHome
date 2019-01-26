@@ -45,9 +45,9 @@ public class Paralax : MonoBehaviour
             while (offset < -length)
                 offset += length;
 
-            sky_gameobjects[0].transform.position = new Vector3(cam_transform.position.x + offset * 0.5f + length, sky_gameobjects[0].transform.position.y, sky_gameobjects[0].transform.position.z);
-            sky_gameobjects[1].transform.position = new Vector3(cam_transform.position.x + offset * 0.5f, sky_gameobjects[1].transform.position.y, sky_gameobjects[1].transform.position.z);
-            sky_gameobjects[2].transform.position = new Vector3(cam_transform.position.x + offset * 0.5f - length, sky_gameobjects[2].transform.position.y, sky_gameobjects[2].transform.position.z);
+            sky_gameobjects[0].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f + length, sky_gameobjects[0].transform.position.y, sky_gameobjects[0].transform.position.z);
+            sky_gameobjects[1].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f, sky_gameobjects[1].transform.position.y, sky_gameobjects[1].transform.position.z);
+            sky_gameobjects[2].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f - length, sky_gameobjects[2].transform.position.y, sky_gameobjects[2].transform.position.z);
             if (cam_transform.position.x - sky_gameobjects[1].transform.position.x > length / 2.0f)
             {
                 GameObject g = sky_gameobjects[0];
