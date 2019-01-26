@@ -19,7 +19,7 @@ public class Player_controls : MonoBehaviour
     private SpriteRenderer sr;
 
     // Start is called before the first frame update
-    void Start ()
+    void Start()
     {
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
@@ -27,27 +27,31 @@ public class Player_controls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate ()
+    void FixedUpdate()
     {
         if (ch.MoveRight || ch.MoveLeft)
         {
-            anim.SetBool("Walk", true);
+            if (ch.Sprint)
+                anim.SetBool("Run", true);
+            else
+                anim.SetBool("Walk", true);
         }
         else
         {
             anim.SetBool("Walk", false);
+            anim.SetBool("Run", false);
         }
 
         if (ch.MoveRight)
         {
-            if(sr.flipX)
+            if (sr.flipX)
             {
                 sr.flipX = false;
             }
             float speed = movement_speed;
             if (ch.Sprint)
                 speed = sprint_speed;
-            player.velocity = new Vector2 (speed * Time.deltaTime, player.velocity.y);
+            player.velocity = new Vector2(speed * Time.deltaTime, player.velocity.y);
         }
         if (ch.MoveLeft)
         {
@@ -58,15 +62,18 @@ public class Player_controls : MonoBehaviour
             float speed = movement_speed;
             if (ch.Sprint)
                 speed = sprint_speed;
-            player.velocity = new Vector2 (-speed * Time.deltaTime, player.velocity.y);
+            player.velocity = new Vector2(-speed * Time.deltaTime, player.velocity.y);
         }
         if (!ch.MoveLeft && !ch.MoveRight)
             player.velocity = new Vector2(0.0f, player.velocity.y);
+
+
         if (ch.Crouch)
         {
-            player.velocity = new Vector2 (0.0f, 0.0f);
+            player.velocity = new Vector2(0.0f, 0.0f);
             /////////////// Play animation for coruching;
             anim.SetBool("Walk", false);
+            anim.SetBool("Run", false);
             anim.SetBool("Crouch", true);
         }
         else
