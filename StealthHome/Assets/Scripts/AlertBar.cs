@@ -5,7 +5,7 @@ using UnityEngine;
 public class AlertBar : MonoBehaviour
 {
 
-    public float AlertLevel { get; set; }
+    public float AlertLevel { get; private set; }
 
     void Start ()
     {
