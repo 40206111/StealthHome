@@ -18,6 +18,8 @@ public class HouseObstacle : MonoBehaviour
 
     //animator
     private Animator anim;
+    [SerializeField]
+    private Animator animIcons;
 
     private Light light;
 
@@ -60,6 +62,7 @@ public class HouseObstacle : MonoBehaviour
         spotter = gameObject.GetComponent<Spotter>();
 
         anim = gameObject.GetComponent<Animator>();
+        //animIcons = gameObject.GetComponentInChildren<Animator>();
         light = GetComponentInChildren<Light>();
     }
 
@@ -77,6 +80,7 @@ public class HouseObstacle : MonoBehaviour
         {
             timeElapsed = 0.0f;
             anim.SetInteger("Stage", (int)State.On);
+            animIcons.SetBool("Wake", true);
             light.intensity = 0.7f;
             stage = State.On;
 
@@ -89,6 +93,8 @@ public class HouseObstacle : MonoBehaviour
                 stage = State.Off;
                 light.intensity = 0;
                 anim.SetInteger("Stage", (int)State.Off);
+                animIcons.SetBool("Sleep", true);
+                animIcons.SetBool("Wake", false);
                 totalWait = Random.Range(minWait, maxWait);
             }
 
@@ -109,6 +115,7 @@ public class HouseObstacle : MonoBehaviour
         float CheckLight = Random.Range(0.0f, 1.0f);
         if (CheckLight <= chance)
         {
+            animIcons.SetBool("Sleep", false);
             anim.SetInteger("Stage", (int)State.Inbetween);
             stage = State.Inbetween;
             light.intensity = 0.3f;
