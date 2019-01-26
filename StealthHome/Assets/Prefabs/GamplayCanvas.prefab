@@ -381,11 +381,6 @@ PrefabInstance:
       objectReference: {fileID: 6562006670414668398}
     - target: {fileID: 3157168704557385505, guid: 5b9126205b6b08540bfd2e200cdcc44a,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157168704557385505, guid: 5b9126205b6b08540bfd2e200cdcc44a,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartMenu
       objectReference: {fileID: 0}
