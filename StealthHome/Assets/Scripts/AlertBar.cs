@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AlertBar : MonoBehaviour
 {
 
-    public Image bar;
+    [SerializeField] private Image bar;
 
     public float AlertLevel = 0; //{ get; private set; }
 
