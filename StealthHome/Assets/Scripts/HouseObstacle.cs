@@ -5,6 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
 public class HouseObstacle : MonoBehaviour
 {
+    // Variables for alerting
+    private AlertBar Alert;
+    private Spotter spotter;
+
     private enum State
     {
         Off,
@@ -51,6 +55,10 @@ public class HouseObstacle : MonoBehaviour
 
     void Start()
     {
+        // Allerting variable initialisation
+        Alert = GameObject.FindGameObjectWithTag("AlertBar").GetComponent<AlertBar>();
+        spotter = gameObject.GetComponent<Spotter>();
+
         anim = gameObject.GetComponent<Animator>();
         light = GetComponentInChildren<Light>();
     }
@@ -86,7 +94,11 @@ public class HouseObstacle : MonoBehaviour
 
         }
 
-
+        // Player is seen moving
+        if (stage == State.On && spotter.Spotted)
+        {
+            Alert.IncrementAlertLevel(0.1f * Time.deltaTime);
+        }
     }
 
     private IEnumerator Light()

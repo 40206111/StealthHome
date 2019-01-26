@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4136967886389195384}
   - component: {fileID: 4019920027254396261}
   - component: {fileID: 2809797134605466903}
+  - component: {fileID: 3735661787460855616}
   m_Layer: 0
   m_Name: house_obs
   m_TagString: Untagged
@@ -120,6 +121,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3735661787460855616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433410002291201319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c2108dd86c22f4bb37a5a27183dc83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotDistance: 1.5
+  Spotted: 0
 --- !u!1 &7260212420305077668
 GameObject:
   m_ObjectHideFlags: 0
