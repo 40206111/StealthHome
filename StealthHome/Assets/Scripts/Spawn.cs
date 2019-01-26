@@ -5,21 +5,35 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private GameObject Spottable;
+
+    Transform camOffset;
     // Start is called before the first frame update
     void Start ()
     {
-
+        camOffset = Camera.main.transform;
+        StartCoroutine (timer ());
     }
 
-    void Spawn ()
+    void Create ()
     {
+        //modifier for positive or negative chosen at random
+        int mod = Random.Range (-1, 1);
+        if (mod >= 0)
+            mod = 1;
+        if (mod < 0)
+            mod = -1;
 
-        Instantiate (Spottable);
+        camOffset.position += new Vector3 (Camera.main.transform.position.x + 2 * mod, -1.5f, 0);
+
+        Instantiate (Spottable, camOffset);
     }
 
     IEnumerator timer ()
     {
-        yield return new WaitForSeconds (5);
+        float secs = Random.Range (0, 10);
+        yield return new WaitForSeconds (secs);
+        Create ();
+        StartCoroutine (timer ());
 
     }
 }
