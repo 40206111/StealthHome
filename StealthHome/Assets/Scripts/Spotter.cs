@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Spotter : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D house;
+    private Rigidbody2D house;
     [SerializeField] private float spotDistance = 1.5f;
 
     public bool Spotted;
+
+    private void Start ()
+    {
+        house = GameObject.FindGameObjectWithTag ("Player").GetComponent<Rigidbody2D> ();
+    }
 
     // Update is called once per frame
     void Update ()
@@ -16,7 +21,7 @@ public class Spotter : MonoBehaviour
         float dist = difference.magnitude;
 
         //if 30 units away or less and house is moving trigger public paramenter Spotted to equal true
-        if (dist <= spotDistance && house.velocity == new Vector2 (0, 0))
+        if (dist <= spotDistance && house.velocity != new Vector2 (0, 0))
         {
             Spotted = true;
             print ("Spot");

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class AlertBar : MonoBehaviour
 {
     private bool cooldown;
+    [SerializeField] private float cooldownActivationWait = 5;
+    private float timer;
 
     [SerializeField] private float regenRate = 0.005f;
     [SerializeField] private Image bar;
@@ -23,26 +25,28 @@ public class AlertBar : MonoBehaviour
     {
         AlertLevel += amount;
         cooldown = false;
-        StartCoroutine (timer (3.0f));
+
+        timer = cooldownActivationWait;
+
     }
 
     private void Update ()
     {
-        //make sure Alert level does not exceed 0 or 1
-        AlertLevel = Mathf.Clamp (AlertLevel, 0, 1);
+        //tick down until cooldown period activates
+        timer -= Time.deltaTime;
 
-        if (cooldown)
+        //if you've been undetected for the fuul cooldown wait then start cooling down
+        if (timer<=0)
         {
-            AlertLevel -= regenRate;
+            AlertLevel -= regenRate * Time.deltaTime;
         }
 
+
+        //make sure Alert level does not exceed 0 or 1
+        AlertLevel = Mathf.Clamp(AlertLevel, 0, 1);
         //set fil level to match AlertLevel
         bar.fillAmount = AlertLevel;
     }
 
-    IEnumerator timer (float secs)
-    {
-        yield return new WaitForSeconds (secs);
-        cooldown = true;
-    }
+   
 }
