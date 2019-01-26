@@ -9,7 +9,7 @@ public class AlertBar : MonoBehaviour
     [SerializeField] private float cooldownActivationWait = 5;
     private float timer;
 
-    [SerializeField] private float regenRate = 0.005f;
+    [SerializeField] private float regenRate = 0.01f;
     [SerializeField] private Image bar;
 
     public float AlertLevel = 0; //{ get; private set; }
