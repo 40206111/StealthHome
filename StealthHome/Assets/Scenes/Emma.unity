@@ -322,6 +322,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6195580288762815421, guid: b025e8a60d046ca4e8e9757a448d1fc2,
+        type: 3}
+      propertyPath: m_TagString
+      value: AlertBar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b025e8a60d046ca4e8e9757a448d1fc2, type: 3}
 --- !u!1 &507742802
@@ -415,6 +420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_avatar
       objectReference: {fileID: 0}
+    - target: {fileID: 7465407581408922927, guid: 79574d273e6f8b84185bfa59d35df57a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5995905052738702359, guid: 79574d273e6f8b84185bfa59d35df57a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,6 +498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578922500186601385, guid: d58821c632bf72e4ebbbc817a3128644,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 3578922500186601391, guid: d58821c632bf72e4ebbbc817a3128644,
         type: 3}
@@ -634,12 +649,12 @@ PrefabInstance:
     - target: {fileID: 4136967886389195384, guid: ebef2c95377dfdb44bd9547f2a49799c,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: 1243858981
+      value: -1763280889
       objectReference: {fileID: 0}
     - target: {fileID: 4136967886389195384, guid: ebef2c95377dfdb44bd9547f2a49799c,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebef2c95377dfdb44bd9547f2a49799c, type: 3}
