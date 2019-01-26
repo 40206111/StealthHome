@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarBehaviour : MonoBehaviour
 {
 
-    [SerializeField] private AlertBar Alert;
+    private AlertBar Alert;
     [SerializeField] private float maxSpeed = 75;
     private Spotter spotter;
 
@@ -16,6 +16,7 @@ public class CarBehaviour : MonoBehaviour
 
     void Start ()
     {
+        Alert = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
         if (gameObject.transform.position.x - Camera.main.transform.position.x > 0)
             dir = -1;
         else

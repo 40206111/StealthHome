@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Spotter : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D house;
+    private Rigidbody2D house;
     [SerializeField] private float spotDistance = 1.5f;
 
     public bool Spotted;
+
+    private void Start ()
+    {
+        house = GameObject.FindGameObjectWithTag ("Player").GetComponent<Rigidbody2D> ();
+    }
 
     // Update is called once per frame
     void Update ()
