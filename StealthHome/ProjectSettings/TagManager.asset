@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1882062263
+    locked: 0
+  - name: Obsticales
+    uniqueID: 1243858981
+    locked: 0
