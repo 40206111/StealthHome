@@ -69,7 +69,7 @@ public class HouseObstacle : MonoBehaviour
         {
             timeElapsed = 0.0f;
             anim.SetInteger("Stage", (int)State.On);
-            light.intensity = 1;
+            light.intensity = 0.5f;
             stage = State.On;
 
         }
@@ -99,7 +99,7 @@ public class HouseObstacle : MonoBehaviour
         {
             anim.SetInteger("Stage", (int)State.Inbetween);
             stage = State.Inbetween;
-            light.intensity = 0.5f;
+            light.intensity = 0.1f;
             timeElapsed = 0.0f;
             randomOnTime = Random.Range(onWaitMin, onWaitMax);
         }
