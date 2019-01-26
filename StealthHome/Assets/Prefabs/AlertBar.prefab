@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8356476346973971497}
   m_Layer: 5
   m_Name: AlertBar
-  m_TagString: Untagged
+  m_TagString: AlertBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,5 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9671ddfdf1896f4e9f4568e8f4074bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownActivationWait: 5
+  regenRate: 0.005
   bar: {fileID: 8356476346910047045}
   AlertLevel: 0
