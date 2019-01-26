@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 287862079665065516}
   - component: {fileID: 4336029229544910121}
   - component: {fileID: 3075151313488539682}
+  - component: {fileID: 940319765}
   m_Layer: 0
   m_Name: Player_avatar
   m_TagString: Untagged
@@ -50,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aaa88debe5464bb4b96dae7cc7d331a6, type: 2}
+  - {fileID: 2100000, guid: b150afb882d1ee64a8c0d3494185bb11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,3 +116,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ch: {fileID: 3578922500186601390, guid: d58821c632bf72e4ebbbc817a3128644, type: 3}
+--- !u!95 &940319765
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465407581408922927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e6efa71fa5dbe84abe6bec10a595a56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
