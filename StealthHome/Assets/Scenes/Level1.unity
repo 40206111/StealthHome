@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 3578922500186601385, guid: d58821c632bf72e4ebbbc817a3128644,
+        type: 3}
+      propertyPath: m_TagString
+      value: Controls
+      objectReference: {fileID: 0}
     - target: {fileID: 3578922500186601391, guid: d58821c632bf72e4ebbbc817a3128644,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1128,6 +1133,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6562006669931318935, guid: b025e8a60d046ca4e8e9757a448d1fc2,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6195580287201488331, guid: b025e8a60d046ca4e8e9757a448d1fc2,
         type: 3}
       propertyPath: m_fontAsset
@@ -1144,6 +1154,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6195580287201488331, guid: b025e8a60d046ca4e8e9757a448d1fc2,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6562006670096841504, guid: b025e8a60d046ca4e8e9757a448d1fc2,
         type: 3}
       propertyPath: m_fontAsset
@@ -1160,6 +1175,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6562006670096841504, guid: b025e8a60d046ca4e8e9757a448d1fc2,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6195580288762815421, guid: b025e8a60d046ca4e8e9757a448d1fc2,
         type: 3}
       propertyPath: m_TagString
