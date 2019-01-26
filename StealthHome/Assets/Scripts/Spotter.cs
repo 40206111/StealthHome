@@ -17,8 +17,8 @@ public class Spotter : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        Vector2 difference = gameObject.transform.position - house.transform.position;
-        float dist = difference.magnitude;
+        //Vector2 difference = gameObject.transform.position - house.transform.position;
+        float dist = Mathf.Abs(gameObject.transform.position.x - house.transform.position.x);
 
         //if 30 units away or less and house is moving trigger public paramenter Spotted to equal true
         if (dist <= spotDistance && house.velocity != new Vector2 (0, 0))
