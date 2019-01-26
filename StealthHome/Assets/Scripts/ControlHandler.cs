@@ -46,11 +46,13 @@ public class ControlHandler : MonoBehaviour
         }
         else
         {
+            print ("Sprint");
             Sprint = false;
         }
 
         if (Input.GetAxis ("Crouch") > 0)
         {
+            print ("Crouch");
             Crouch = true;
         }
         else
