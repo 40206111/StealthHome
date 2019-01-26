@@ -19,7 +19,7 @@ public class Paralax : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float length = sprite.bounds.size.x;
         float offset = cam_transform.position.x;
