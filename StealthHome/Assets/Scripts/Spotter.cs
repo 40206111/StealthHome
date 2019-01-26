@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spotter : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D house;
-    [SerializeField] private float spotDistance = 3;
+    [SerializeField] private float spotDistance = 1.5f;
 
     public bool Spotted;
 

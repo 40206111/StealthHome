@@ -47,7 +47,7 @@ public class CarBehaviour : MonoBehaviour
         else
         {
             //bump alert level meter
-            Alert.IncrementAlertLevel (0.1f * Time.deltaTime);
+            Alert.IncrementAlertLevel (0.01f * Time.deltaTime);
 
             //slow down
             if (rb.velocity.x > 0 || rb.velocity.x < 0)
