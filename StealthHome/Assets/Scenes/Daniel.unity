@@ -532,6 +532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spottable: {fileID: 3268784844452745871, guid: 8644397c6ba63e24f80dc4e842016d33,
     type: 3}
+  minSpawnTime: 20
+  maxSpawnTime: 35
 --- !u!4 &1618415746
 Transform:
   m_ObjectHideFlags: 0
