@@ -58,14 +58,14 @@ public class ControlHandler : MonoBehaviour
             Crouch = false;
         }
 
-        //log states
-        if (MoveLeft)
-            Debug.Log ("LEFT");
-        if (MoveRight)
-            Debug.Log ("RIGHT");
-        if (Sprint)
-            Debug.Log ("SPRINTING");
-        if (Crouch)
-            Debug.Log ("CROUGHING");
+        ////log states
+        //if (MoveLeft)
+        //    Debug.Log ("LEFT");
+        //if (MoveRight)
+        //    Debug.Log ("RIGHT");
+        //if (Sprint)
+        //    Debug.Log ("SPRINTING");
+        //if (Crouch)
+        //    Debug.Log ("CROUGHING");
     }
 }
