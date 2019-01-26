@@ -15,6 +15,8 @@ public class HouseObstacle : MonoBehaviour
     //animator
     private Animator anim;
 
+    private Light light;
+
     //Variables to be changed within Unity
     [SerializeField]
     private float minWait = 1.0f;           //minimum wait until light can come on again
@@ -50,6 +52,7 @@ public class HouseObstacle : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        light = GetComponentInChildren<Light>();
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class HouseObstacle : MonoBehaviour
         {
             timeElapsed = 0.0f;
             anim.SetInteger("Stage", (int)State.On);
+            light.intensity = 0.5f;
             stage = State.On;
 
         }
@@ -75,6 +79,7 @@ public class HouseObstacle : MonoBehaviour
             {
                 timeElapsed = 0.0f;
                 stage = State.Off;
+                light.intensity = 0;
                 anim.SetInteger("Stage", (int)State.Off);
                 totalWait = Random.Range(minWait, maxWait);
             }
@@ -94,6 +99,7 @@ public class HouseObstacle : MonoBehaviour
         {
             anim.SetInteger("Stage", (int)State.Inbetween);
             stage = State.Inbetween;
+            light.intensity = 0.1f;
             timeElapsed = 0.0f;
             randomOnTime = Random.Range(onWaitMin, onWaitMax);
         }

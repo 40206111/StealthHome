@@ -16,7 +16,7 @@ public class Spotter : MonoBehaviour
         float dist = difference.magnitude;
 
         //if 30 units away or less and house is moving trigger public paramenter Spotted to equal true
-        if (dist <= spotDistance && house.velocity != new Vector2 (0, 0))
+        if (dist <= spotDistance && house.velocity == new Vector2 (0, 0))
         {
             Spotted = true;
             print ("Spot");

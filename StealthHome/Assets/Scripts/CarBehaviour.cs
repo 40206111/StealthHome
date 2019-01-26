@@ -47,13 +47,13 @@ public class CarBehaviour : MonoBehaviour
         else
         {
             //bump alert level meter
-            Alert.IncrementAlertLevel (0.01f * Time.deltaTime);
+            Alert.IncrementAlertLevel (0.1f * Time.deltaTime);
 
             //slow down
             if (rb.velocity.x > 0 || rb.velocity.x < 0)
             {
                 //rb.velocity += new Vector2 (0.1f * dirModifier, 0);
-                rb.velocity = Vector2.Lerp (rb.velocity, new Vector2 (0, 0), 0.01f);
+                rb.velocity = Vector2.Lerp (rb.velocity, new Vector2 (0, 0), 0.02f);
                 Debug.ClearDeveloperConsole ();
                 Debug.Log (rb.velocity.x);
             }
