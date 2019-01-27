@@ -49,8 +49,6 @@ public class GameOver : MonoBehaviour
             }
         }
 
-        print ("wat");
-
         //freeze player and tick down untill load main menu
         if (Failed)
         {

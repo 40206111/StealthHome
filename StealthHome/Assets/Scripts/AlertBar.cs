@@ -8,17 +8,16 @@ public class AlertBar : MonoBehaviour
     private bool cooldown;
     [SerializeField] private float cooldownActivationWait = 5;
     private float timer;
+    [SerializeField]
+    private Image wedge;
 
     [SerializeField] private float regenRate = 0.01f;
-    [SerializeField] private Image bar;
 
     public float AlertLevel = 0; //{ get; private set; }
 
     void Start ()
     {
         AlertLevel = 0.0f;
-        //bar = bar.GetComponentInChildren<Image> ();
-        print (bar.name);
     }
 
     public void IncrementAlertLevel (float amount)
@@ -44,8 +43,7 @@ public class AlertBar : MonoBehaviour
 
         //make sure Alert level does not exceed 0 or 1
         AlertLevel = Mathf.Clamp(AlertLevel, 0, 1);
-        //set fil level to match AlertLevel
-        bar.fillAmount = AlertLevel;
+        wedge.rectTransform.localPosition = new Vector3(Mathf.Lerp(-34.0f, 34.0f, AlertLevel), wedge.rectTransform.localPosition.y, wedge.rectTransform.localPosition.z);
     }
 
    
