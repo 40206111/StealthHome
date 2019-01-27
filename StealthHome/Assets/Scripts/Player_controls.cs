@@ -21,6 +21,8 @@ public class Player_controls : MonoBehaviour
     //Sprite renderer
     private SpriteRenderer sr;
 
+    public bool disable = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +37,17 @@ public class Player_controls : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (disable) return;
+
         if (ch.MoveRight || ch.MoveLeft)
         {
             if (ch.Sprint)
                 anim.SetBool("Run", true);
             else
+            {
                 anim.SetBool("Walk", true);
+                anim.SetBool("Run", false);
+            }
             steps.WalkSound();
         }
         else
