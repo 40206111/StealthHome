@@ -163,6 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownActivationWait: 5
+  wedge: {fileID: 4254096239074501654}
   regenRate: 0.005
-  bar: {fileID: 8356476346973971496}
   AlertLevel: 0
