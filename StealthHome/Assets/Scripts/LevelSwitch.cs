@@ -25,6 +25,7 @@ public class LevelSwitch : MonoBehaviour
 
     IEnumerator NextLevel ()
     {
+        GameObject.FindGameObjectWithTag("AlertBar").GetComponent<AlertBar>().dont_track = true;
         StartCoroutine(Chill());
         yield return new WaitForSeconds (MusicPlayer.levelWin.length);
         int currentIndex = SceneManager.GetActiveScene ().buildIndex;

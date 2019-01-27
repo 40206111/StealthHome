@@ -3638,7 +3638,7 @@ PrefabInstance:
     - target: {fileID: 583140658781666211, guid: 8135cd2be4bf63443a3970fef8c4fd11,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.78
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 583140658781666211, guid: 8135cd2be4bf63443a3970fef8c4fd11,
         type: 3}
@@ -7540,6 +7540,11 @@ PrefabInstance:
       propertyPath: sky_gameobjects.Array.data[2]
       value: 
       objectReference: {fileID: 1852660243}
+    - target: {fileID: 2317847953472141939, guid: b025e8a60d046ca4e8e9757a448d1fc2,
+        type: 3}
+      propertyPath: levelTime
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b025e8a60d046ca4e8e9757a448d1fc2, type: 3}
 --- !u!4 &2102257779 stripped
