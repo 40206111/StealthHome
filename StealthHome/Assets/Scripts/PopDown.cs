@@ -41,7 +41,6 @@ public class PopDown : MonoBehaviour
     {
         rt.localPosition = downPos;
         isDown = true;
-        Debug.Log("Down");
         Cursor.visible = true;
         Time.timeScale = 0;
     }
@@ -49,9 +48,7 @@ public class PopDown : MonoBehaviour
     public void SetUp()
     {
         rt.localPosition = upPos;
-        Debug.Log(rt.localPosition = upPos);
         isDown = false;
-        Debug.Log("Up");
         Cursor.visible = false;
         Time.timeScale = 1;
     }

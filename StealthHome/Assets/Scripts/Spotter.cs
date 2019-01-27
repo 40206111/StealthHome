@@ -28,7 +28,6 @@ public class Spotter : MonoBehaviour
         if (dist <= spotDistance && !ch.Crouch)
         {
             Spotted = true;
-            print ("Spot");
         }
         else if (ch.Sprint && Mathf.Abs(house.velocity.x) > 0.0)
         {
