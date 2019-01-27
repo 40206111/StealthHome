@@ -19,25 +19,41 @@ public class GameOver : MonoBehaviour
     public float EndTimer = 4;
     public bool Failed;
 
-    // Start is called before the first frame update
-    void Start ()
-    {
-        img = gameObject.GetComponent<Image> ();
-        tmp = gameObject.GetComponentInChildren<TextMeshProUGUI> ();
-        bar = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
-        bm = GameObject.Find ("ButtonManager").GetComponent<ButtonManager> ();
-        player = GameObject.FindGameObjectWithTag ("Player");
+    [SerializeField]
+    List<GameObject> sky_gameobjects;
+    [SerializeField]
+    float levelTime = 30.0f;
 
+    private float moveAmount;
+
+    private bool timedOut = false;
+
+    private Light mainLight;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        img = gameObject.GetComponent<Image>();
+        tmp = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        bar = GameObject.FindGameObjectWithTag("AlertBar").GetComponent<AlertBar>();
+        bm = GameObject.Find("ButtonManager").GetComponent<ButtonManager>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        mainLight = GameObject.FindGameObjectWithTag("MainLight").GetComponent<Light>();
         mainAudio = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
         footsteps = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+
+        moveAmount = sky_gameobjects[0].transform.position.y + 13.0f;
+
+        StartCoroutine(Sunrise());
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
-        if (bar.AlertLevel >= 1)
+        if (bar.AlertLevel >= 1 || timedOut)
         {
-            StartCoroutine (FailState ());
+            StartCoroutine(FailState());
             if (mainAudio != null)
             {
                 if (mainAudio.clip != MusicPlayer.pubLose)
@@ -58,14 +74,36 @@ public class GameOver : MonoBehaviour
 
         if (EndTimer <= 0)
         {
-            bm.StartMenu ();
+            bm.StartMenu();
         }
     }
 
-    IEnumerator FailState ()
+    IEnumerator FailState()
     {
-        tmp.color = new Color (tmp.color.r, tmp.color.g, tmp.color.b, tmp.color.a + 3 * Time.fixedDeltaTime);
-        img.color = new Color (0, 0, 0, img.color.a + 3 * Time.fixedDeltaTime);
+        tmp.color = new Color(tmp.color.r, tmp.color.g, tmp.color.b, tmp.color.a + 3 * Time.fixedDeltaTime);
+        img.color = new Color(0, 0, 0, img.color.a + 3 * Time.fixedDeltaTime);
         yield return Failed = true;
+    }
+
+    private IEnumerator Sunrise()
+    {
+        yield return new WaitForSeconds(levelTime);
+        while (sky_gameobjects[0].transform.position.y <= moveAmount)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Vector2 pos = sky_gameobjects[i].transform.position;
+                pos.y += 0.1f;
+                sky_gameobjects[i].transform.position = pos;
+            }
+            if (mainLight.intensity <= 1.0f)
+            {
+                mainLight.intensity += 0.01f;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        timedOut = true;
+
     }
 }

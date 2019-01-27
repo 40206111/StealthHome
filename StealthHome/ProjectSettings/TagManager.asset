@@ -9,6 +9,7 @@ TagManager:
   - Camera
   - icons
   - MainAudio
+  - MainLight
   layers:
   - Default
   - TransparentFX
@@ -43,17 +44,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background 1 (front)
-    uniqueID: 3607421535
+  - name: Background 3 (back)
+    uniqueID: 4156649715
     locked: 0
   - name: Background 2
     uniqueID: 2086517021
     locked: 0
-  - name: Background 3 (back)
-    uniqueID: 4156649715
-    locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Background 1 (front)
+    uniqueID: 3607421535
     locked: 0
   - name: Behind Player
     uniqueID: 2531686407
@@ -63,4 +61,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 385298031
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
