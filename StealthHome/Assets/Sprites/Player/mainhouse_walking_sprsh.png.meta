@@ -101,8 +101,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ca8f5bc968bd6742a1febf8f4c0be87
+      spriteID: 0918a3559818e1d4ead7682523dffd95
       vertices: []
       indices: 
       edges: []
@@ -119,10 +119,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 136
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9403687762f9399448528868180c0ffb
+      spriteID: d93749142707f0e4497726d75847a36a
       vertices: []
       indices: 
       edges: []
@@ -139,10 +139,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 272
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,7 +150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6579a3fafa8f2024e9e900f3d7dbf03b
+      spriteID: 6e6ee31504cedef4f99b412ea3bbe28a
       vertices: []
       indices: 
       edges: []
@@ -159,10 +159,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 408
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,7 +170,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3973e4e1bba2222428331f744d9f3964
+      spriteID: 0175bb001f2f7f54aa1a61bb19143363
       vertices: []
       indices: 
       edges: []
@@ -179,10 +179,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 544
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cac073e2cbed9674a8429feb0570585a
+      spriteID: 18449f488ad22764fbbcf0cd5c68dd85
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 680
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4301e3dc7ad4f3342b22869003bed6dd
+      spriteID: 66da6f13e8ee7e74d92b70dac547b03b
       vertices: []
       indices: 
       edges: []
@@ -219,10 +219,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 816
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,7 +230,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b19331067d6d045a660e26b9e52786
+      spriteID: 40aef349b9736ff4986f87eebbeb393e
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 952
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,7 +250,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1efdc2d1139e9954787d816500bdfa81
+      spriteID: 736f44c96c267a94991596ac17a80e78
       vertices: []
       indices: 
       edges: []
@@ -259,10 +259,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1088
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,7 +270,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c62f948dfc943e4299bddc14dfe024d
+      spriteID: 0d2518de0873af644a118575a482695d
       vertices: []
       indices: 
       edges: []
@@ -279,10 +279,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1224
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,7 +290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c37c3d3e243734ea9ba7ae7c5ec424
+      spriteID: 6e4b5a51e587ea04d8528542837b24ca
       vertices: []
       indices: 
       edges: []
@@ -299,10 +299,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1360
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,7 +310,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e42c89e83fa893418c3e147ea013f3b
+      spriteID: ab1ff618fcd3d7a4aa39acf1b1c778b7
       vertices: []
       indices: 
       edges: []
@@ -319,10 +319,10 @@ TextureImporter:
       name: mainhouse_walking_sprsh_11
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 1496
         y: 0
-        width: 128
-        height: 180
+        width: 136
+        height: 188
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,7 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b171dfb5dc3490149a1fab70bb612aa4
+      spriteID: 425ff3025bbd25e428ed74eb07deaebe
       vertices: []
       indices: 
       edges: []
