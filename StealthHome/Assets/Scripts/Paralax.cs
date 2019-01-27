@@ -26,35 +26,36 @@ public class Paralax : MonoBehaviour
 
         if (cam_transform.position.x > 0)
         {
+            int count = 0;
             while (offset > length)
+            {
                 offset -= length;
-
+                count++;
+            }
+            if(count%2 == 1)
+            {
+                offset += length;
+            }
             sky_gameobjects[0].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f - length, sky_gameobjects[0].transform.position.y, sky_gameobjects[0].transform.position.z);
             sky_gameobjects[1].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f, sky_gameobjects[1].transform.position.y, sky_gameobjects[1].transform.position.z);
             sky_gameobjects[2].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f + length, sky_gameobjects[2].transform.position.y, sky_gameobjects[2].transform.position.z);
-            if (sky_gameobjects[1].transform.position.x - cam_transform.position.x > length / 2.0f)
-            {
-                GameObject g = sky_gameobjects[0];
-                sky_gameobjects[0] = sky_gameobjects[1];
-                sky_gameobjects[1] = sky_gameobjects[2];
-                sky_gameobjects[2] = sky_gameobjects[0];
-            }
         }
         else
         {
+            int count = 0;
             while (offset < -length)
+            {
                 offset += length;
+                count++;
+            }
+            if (count % 2 == 1)
+            {
+                offset -= length;
+            }
 
             sky_gameobjects[0].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f + length, sky_gameobjects[0].transform.position.y, sky_gameobjects[0].transform.position.z);
             sky_gameobjects[1].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f, sky_gameobjects[1].transform.position.y, sky_gameobjects[1].transform.position.z);
             sky_gameobjects[2].transform.position = new Vector3(cam_transform.position.x - offset * 0.5f - length, sky_gameobjects[2].transform.position.y, sky_gameobjects[2].transform.position.z);
-            if (cam_transform.position.x - sky_gameobjects[1].transform.position.x > length / 2.0f)
-            {
-                GameObject g = sky_gameobjects[0];
-                sky_gameobjects[0] = sky_gameobjects[2];
-                sky_gameobjects[1] = sky_gameobjects[0];
-                sky_gameobjects[2] = sky_gameobjects[1];
-            }
         }
     }
 }
