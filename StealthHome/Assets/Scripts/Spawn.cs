@@ -10,6 +10,8 @@ public class Spawn : MonoBehaviour
 
     Vector2 cam;
     Transform[] spawnPoints;
+    private int prevmod;
+    private int consecutives;
     // Start is called before the first frame update
     void Start ()
     {
@@ -28,7 +30,20 @@ public class Spawn : MonoBehaviour
     {
         //modifier for positive or negative chosen at random
         float coin = Random.Range (-1.0f, 1.0f);
-        int mod = Mathf.RoundToInt (coin);
+        int mod;
+        mod = coin >= 0 ? 1 : -1;
+
+        //have no more than 2 cars from the same direction one after the other
+        if (mod == prevmod)
+        {
+            consecutives++;
+        }
+        if (consecutives >= 2)
+        {
+            mod = mod * -1;
+            consecutives = 0;
+        }
+
         Transform sp;
         if (mod >= 0)
             sp = spawnPoints[2];
@@ -37,6 +52,8 @@ public class Spawn : MonoBehaviour
 
         int r = Random.Range (0, Cars.Count);
         Instantiate (Cars[r], sp);
+
+        prevmod = mod;
     }
 
     IEnumerator timer ()
