@@ -11,7 +11,7 @@ public class AlertBar : MonoBehaviour
     [SerializeField]
     private Image wedge;
 
-    [SerializeField] private float regenRate = 0.01f;
+    private const float regenRate = 0.05f;
 
     public float AlertLevel = 0; //{ get; private set; }
 
