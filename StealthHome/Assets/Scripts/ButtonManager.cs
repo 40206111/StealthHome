@@ -15,4 +15,9 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene ("StartScreen");
     }
+
+    public void Begin()
+    {
+        SceneManager.LoadScene("Emma");
+    }
 }

@@ -16,8 +16,6 @@ public class PlayerCutScene : MonoBehaviour
     private Animator[] IconAnim;
     private Transform trans;
 
-    private AudioSource music;
-
     [SerializeField]
     private string scn = "Cut";
 
@@ -26,7 +24,6 @@ public class PlayerCutScene : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         trans = gameObject.GetComponent<Transform>();
-        music = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,8 +94,6 @@ public class PlayerCutScene : MonoBehaviour
         {
             i.GetComponentInChildren<Light>().intensity = 0.2f;
         }
-        music.Play();
-
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(scn);
     }
@@ -108,7 +103,7 @@ public class PlayerCutScene : MonoBehaviour
         anim.SetBool("Walk", true);
         while (trans.position.y >= -2.3f)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.25f);
             Vector2 pos = trans.position;
             pos.y -= 0.1f;
             pos.x += 0.05f;
