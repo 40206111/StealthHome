@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -31,36 +31,36 @@ public class GameOver : MonoBehaviour
     private Light mainLight;
 
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        img = gameObject.GetComponent<Image>();
-        tmp = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        bar = GameObject.FindGameObjectWithTag("AlertBar").GetComponent<AlertBar>();
-        bm = GameObject.Find("ButtonManager").GetComponent<ButtonManager>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        img = gameObject.GetComponent<Image> ();
+        tmp = gameObject.GetComponentInChildren<TextMeshProUGUI> ();
+        bar = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
+        bm = GameObject.Find ("ButtonManager").GetComponent<ButtonManager> ();
+        player = GameObject.FindGameObjectWithTag ("Player");
 
-        mainLight = GameObject.FindGameObjectWithTag("MainLight").GetComponent<Light>();
-        mainAudio = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
-        footsteps = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        mainLight = GameObject.FindGameObjectWithTag ("MainLight").GetComponent<Light> ();
+        mainAudio = GameObject.FindGameObjectWithTag ("MainAudio").GetComponent<AudioSource> ();
+        footsteps = GameObject.FindGameObjectWithTag ("Player").GetComponent<AudioSource> ();
 
         moveAmount = sky_gameobjects[0].transform.position.y + 13.0f;
 
-        StartCoroutine(Sunrise());
+        StartCoroutine (Sunrise ());
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ()
     {
         if (bar.AlertLevel >= 1 || timedOut)
         {
-            StartCoroutine(FailState());
+            StartCoroutine (FailState ());
             if (mainAudio != null)
             {
                 if (mainAudio.clip != MusicPlayer.pubLose)
                 {
                     mainAudio.loop = false;
                     mainAudio.clip = MusicPlayer.pubLose;
-                    mainAudio.Play();
+                    mainAudio.Play ();
                 }
             }
         }
@@ -68,26 +68,26 @@ public class GameOver : MonoBehaviour
         //freeze player and tick down untill load main menu
         if (Failed)
         {
-            player.SetActive(false);
+            player.SetActive (false);
             EndTimer -= Time.deltaTime;
         }
 
         if (EndTimer <= 0)
         {
-            bm.StartMenu();
+            bm.StartMenu ();
         }
     }
 
-    IEnumerator FailState()
+    IEnumerator FailState ()
     {
-        tmp.color = new Color(tmp.color.r, tmp.color.g, tmp.color.b, tmp.color.a + 3 * Time.fixedDeltaTime);
-        img.color = new Color(0, 0, 0, img.color.a + 3 * Time.fixedDeltaTime);
+        tmp.color = new Color (tmp.color.r, tmp.color.g, tmp.color.b, tmp.color.a + 3 * Time.fixedDeltaTime);
+        img.color = new Color (0, 0, 0, img.color.a + 3 * Time.fixedDeltaTime);
         yield return Failed = true;
     }
 
-    private IEnumerator Sunrise()
+    private IEnumerator Sunrise ()
     {
-        yield return new WaitForSeconds(levelTime);
+        yield return new WaitForSeconds (levelTime);
         while (sky_gameobjects[0].transform.position.y <= moveAmount)
         {
             for (int i = 0; i < 3; i++)
@@ -100,7 +100,7 @@ public class GameOver : MonoBehaviour
             {
                 mainLight.intensity += 0.01f;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds (0.1f);
         }
 
         timedOut = true;
