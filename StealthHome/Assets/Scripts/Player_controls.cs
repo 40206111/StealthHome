@@ -13,6 +13,8 @@ public class Player_controls : MonoBehaviour
     const float movement_speed = 80.0f;
     const float sprint_speed = 130.0f;
 
+    Footsteps steps;
+
     //animator
     private Animator anim;
     //Sprite renderer
@@ -24,6 +26,7 @@ public class Player_controls : MonoBehaviour
         player = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         sr = gameObject.GetComponent<SpriteRenderer>();
+        steps = gameObject.GetComponent<Footsteps>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class Player_controls : MonoBehaviour
                 anim.SetBool("Run", true);
             else
                 anim.SetBool("Walk", true);
+            steps.WalkSound();
         }
         else
         {
