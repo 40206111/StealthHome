@@ -16,11 +16,17 @@ public class CarBehaviour : MonoBehaviour
 
     void Start ()
     {
+        
         Alert = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
         if (gameObject.transform.position.x - Camera.main.transform.position.x > 0)
+        {
             dir = -1;
+        }
         else
+        {
             dir = 1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
 
         //caching
         rb = gameObject.GetComponent<Rigidbody2D> ();
