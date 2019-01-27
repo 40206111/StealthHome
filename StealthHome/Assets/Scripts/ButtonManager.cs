@@ -27,6 +27,6 @@ public class ButtonManager : MonoBehaviour
     public void Begin ()
     {
         a.Play ();
-        SceneManager.LoadScene ("Emma");
+        SceneManager.LoadScene ("Level1");
     }
 }
