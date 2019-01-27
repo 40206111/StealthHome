@@ -16,7 +16,7 @@ public class CarBehaviour : MonoBehaviour
 
     void Start ()
     {
-        
+
         Alert = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
         if (gameObject.transform.position.x - Camera.main.transform.position.x > 0)
         {
@@ -25,7 +25,7 @@ public class CarBehaviour : MonoBehaviour
         else
         {
             dir = 1;
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            gameObject.GetComponent<SpriteRenderer> ().flipX = true;
         }
 
         //caching
@@ -61,8 +61,6 @@ public class CarBehaviour : MonoBehaviour
             {
                 //rb.velocity += new Vector2 (0.1f * dirModifier, 0);
                 rb.velocity = Vector2.Lerp (rb.velocity, new Vector2 (0, 0), 0.02f);
-                Debug.ClearDeveloperConsole ();
-                Debug.Log (rb.velocity.x);
             }
 
             if (rb.velocity.x < 0.1f && rb.velocity.x > 0 || rb.velocity.x > -0.1f && rb.velocity.x < 0)

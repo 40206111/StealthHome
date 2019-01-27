@@ -27,9 +27,10 @@ public class Spawn : MonoBehaviour
     void Create ()
     {
         //modifier for positive or negative chosen at random
-        int mod = Random.Range (0, 1);
+        float coin = Random.Range (-1.0f, 1.0f);
+        int mod = Mathf.RoundToInt (coin);
         Transform sp;
-        if (mod == 0)
+        if (mod >= 0)
             sp = spawnPoints[2];
         else
             sp = spawnPoints[1];
