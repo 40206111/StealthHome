@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 940319765}
   - component: {fileID: 6973399181909435473}
   - component: {fileID: 8534569272335738284}
+  - component: {fileID: 3601655893666391652}
   m_Layer: 0
   m_Name: Player_avatar
   m_TagString: Player
@@ -251,3 +252,29 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1316749dfec3ac142b85e00ce02546c4, type: 3}
   - {fileID: 8300000, guid: e912c6ac3e425bc4c87e05d1bb907aa3, type: 3}
   - {fileID: 8300000, guid: 853f1c310f630384a9b3e2646a22ad8a, type: 3}
+--- !u!61 &3601655893666391652
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465407581408922927}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0026917756, y: 0.64}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0269778, y: 1.28}
+  m_EdgeRadius: 0
