@@ -5,19 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    AudioSource a;
+
+    private void Start ()
+    {
+        a = gameObject.GetComponent<AudioSource> ();
+    }
 
     public void ExitGame ()
     {
+        a.Play ();
         Application.Quit ();
     }
 
     public void StartMenu ()
     {
+        a.Play ();
         SceneManager.LoadScene ("StartScreen");
     }
 
-    public void Begin()
+    public void Begin ()
     {
-        SceneManager.LoadScene("Emma");
+        a.Play ();
+        SceneManager.LoadScene ("Emma");
     }
 }
