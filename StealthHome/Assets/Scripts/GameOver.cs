@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour
     private TextMeshProUGUI tmp;
     private Image img;
     private ButtonManager bm;
-    private Rigidbody2D rb;
+    private GameObject player;
 
     private AudioSource mainAudio = null;
     private AudioSource footsteps;
@@ -26,7 +26,7 @@ public class GameOver : MonoBehaviour
         tmp = gameObject.GetComponentInChildren<TextMeshProUGUI> ();
         bar = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
         bm = GameObject.Find ("ButtonManager").GetComponent<ButtonManager> ();
-        rb = GameObject.FindGameObjectWithTag ("Player").GetComponent<Rigidbody2D> ();
+        player = GameObject.FindGameObjectWithTag ("Player");
 
         mainAudio = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
         footsteps = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
@@ -52,8 +52,7 @@ public class GameOver : MonoBehaviour
         //freeze player and tick down untill load main menu
         if (Failed)
         {
-            rb.velocity = new Vector2 (0, 0);
-            footsteps.mute = true;
+            player.SetActive(false);
             EndTimer -= Time.deltaTime;
         }
 

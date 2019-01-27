@@ -29,10 +29,6 @@ public class Spotter : MonoBehaviour
         {
             Spotted = true;
         }
-        else if (ch.Sprint && Mathf.Abs(house.velocity.x) > 0.0)
-        {
-            ab.IncrementAlertLevel(0.02f * Time.deltaTime);
-        }
         else
         {
             Spotted = false;

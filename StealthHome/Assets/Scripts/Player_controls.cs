@@ -7,11 +7,12 @@ public class Player_controls : MonoBehaviour
 {
     [SerializeField]
     ControlHandler ch;
+    AlertBar alertBar;
 
     Rigidbody2D player;
 
     const float movement_speed = 80.0f;
-    const float sprint_speed = 130.0f;
+    const float sprint_speed = 160.0f;
 
     Footsteps steps;
 
@@ -27,6 +28,8 @@ public class Player_controls : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         steps = gameObject.GetComponent<Footsteps>();
+
+        alertBar = GameObject.FindGameObjectWithTag("AlertBar").GetComponent<AlertBar>();
     }
 
     // Update is called once per frame
@@ -84,5 +87,9 @@ public class Player_controls : MonoBehaviour
         {
             anim.SetBool("Crouch", false);
         }
+
+        // Increase alert if running
+        if (anim.GetBool("Run"))
+            alertBar.IncrementAlertLevel(0.1f * Time.deltaTime);
     }
 }
