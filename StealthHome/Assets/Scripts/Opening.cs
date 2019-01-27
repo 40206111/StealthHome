@@ -41,7 +41,7 @@ public class Opening : MonoBehaviour
             Vector2 pos = trans.position;
             pos.y += 0.1f;
             trans.position = pos;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
 
         pcs.begin = true;
@@ -51,7 +51,7 @@ public class Opening : MonoBehaviour
 
     IEnumerator Begin()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         GetComponent<SpriteRenderer>().sprite = Bump;
         StartCoroutine(Up());
     }

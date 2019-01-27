@@ -13,8 +13,12 @@ public class GameOver : MonoBehaviour
     private ButtonManager bm;
     private Rigidbody2D rb;
 
+    private AudioSource mainAudio = null;
+    private AudioSource footsteps;
+
     public float EndTimer = 4;
     public bool Failed;
+
     // Start is called before the first frame update
     void Start ()
     {
@@ -23,6 +27,9 @@ public class GameOver : MonoBehaviour
         bar = GameObject.FindGameObjectWithTag ("AlertBar").GetComponent<AlertBar> ();
         bm = GameObject.Find ("ButtonManager").GetComponent<ButtonManager> ();
         rb = GameObject.FindGameObjectWithTag ("Player").GetComponent<Rigidbody2D> ();
+
+        mainAudio = GameObject.FindGameObjectWithTag("MainAudio").GetComponent<AudioSource>();
+        footsteps = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +38,15 @@ public class GameOver : MonoBehaviour
         if (bar.AlertLevel >= 1)
         {
             StartCoroutine (FailState ());
+            if (mainAudio != null)
+            {
+                if (mainAudio.clip != MusicPlayer.pubLose)
+                {
+                    mainAudio.loop = false;
+                    mainAudio.clip = MusicPlayer.pubLose;
+                    mainAudio.Play();
+                }
+            }
         }
 
         print ("wat");
@@ -39,10 +55,11 @@ public class GameOver : MonoBehaviour
         if (Failed)
         {
             rb.velocity = new Vector2 (0, 0);
+            footsteps.mute = true;
             EndTimer -= Time.deltaTime;
         }
 
-        if (EndTimer <= 0 || (Failed && Input.anyKeyDown))
+        if (EndTimer <= 0)
         {
             bm.StartMenu ();
         }

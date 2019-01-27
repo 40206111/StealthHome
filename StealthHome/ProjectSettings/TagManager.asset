@@ -8,6 +8,7 @@ TagManager:
   - Controls
   - Camera
   - icons
+  - MainAudio
   layers:
   - Default
   - TransparentFX
