@@ -15,39 +15,41 @@ public class MusicPlayer : MonoBehaviour
     private AudioClip gameMusic;
     [SerializeField]
     private AudioClip lose;
+    [SerializeField] AudioClip win;
 
+    public static AudioClip levelWin;
     public static AudioClip pubLose;
 
-
-    void OnEnable()
+    void OnEnable ()
     {
         SceneManager.sceneLoaded += LevelLoaded;
     }
 
-    void Awake()
+    void Awake ()
     {
         if (instance != null)
         {
-            Destroy(gameObject);
+            Destroy (gameObject);
         }
         else
         {
             instance = this;
-            GameObject.DontDestroyOnLoad(gameObject);
+            GameObject.DontDestroyOnLoad (gameObject);
         }
 
-        music = GetComponent<AudioSource>();
+        music = GetComponent<AudioSource> ();
         pubLose = lose;
+        levelWin = win;
     }
 
-    void LevelLoaded(Scene scene, LoadSceneMode mode)
+    void LevelLoaded (Scene scene, LoadSceneMode mode)
     {
-        if (SceneManager.GetActiveScene().name == "StartScreen")
+        if (SceneManager.GetActiveScene ().name == "StartScreen")
         {
-            Debug.Log(scene.name);
+            Debug.Log (scene.name);
             music.loop = true;
             music.clip = gameMusic;
-            music.PlayDelayed(0.5f);
+            music.PlayDelayed (0.5f);
         }
     }
 }
