@@ -8,14 +8,14 @@ public class Spawn : MonoBehaviour
     [SerializeField] private float minSpawnTime = 20.0f;
     [SerializeField] private float maxSpawnTime = 35.0f;
 
-    Vector2 cam;
+    Transform cam;
     Transform[] spawnPoints;
     private int prevmod;
     private int consecutives;
     // Start is called before the first frame update
     void Start ()
     {
-        cam = Camera.main.transform.position;
+        cam = Camera.main.transform;
         spawnPoints = gameObject.GetComponentsInChildren<Transform> ();
         StartCoroutine (timer ());
     }
@@ -23,7 +23,7 @@ public class Spawn : MonoBehaviour
     private void Update ()
     {
         //follow camera
-        gameObject.transform.position = cam;
+        gameObject.transform.position = new Vector3(cam.position.x, cam.position.y, 0.0f);
     }
 
     void Create ()
