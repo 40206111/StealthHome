@@ -80,7 +80,7 @@ public class PlayerCutScene : MonoBehaviour
             a.SetInteger("Stage", 1);
         }
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         foreach (Animator a in IconAnim)
         {

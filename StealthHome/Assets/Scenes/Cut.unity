@@ -570,8 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da851d63d35b1a47bf9fe97dc08096b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wait: 0.4
-  waitBeforeBegin: 2
+  wait: 0.3
+  waitBeforeBegin: 3
 --- !u!114 &184160352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Stealth Home
+  m_text: Moving House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 808845734cab06b458f0bd2671901535, type: 2}
   m_sharedMaterial: {fileID: 21603544802365408, guid: 808845734cab06b458f0bd2671901535,
@@ -3139,7 +3139,7 @@ MonoBehaviour:
   - {fileID: 1178841239}
   - {fileID: 1257670843}
   - {fileID: 1568622306}
-  scn: Cut
+  scn: StartScreen
 --- !u!1 &936127059
 GameObject:
   m_ObjectHideFlags: 0
