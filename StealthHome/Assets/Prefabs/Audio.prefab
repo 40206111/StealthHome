@@ -143,3 +143,4 @@ MonoBehaviour:
   intro: {fileID: 8300000, guid: 986198be15ea13749904c80df0d3ebd4, type: 3}
   gameMusic: {fileID: 8300000, guid: 02d5ab8a63565b54187fcf485038a433, type: 3}
   lose: {fileID: 8300000, guid: 8034ad9c8c257e942864294b1dbc7959, type: 3}
+  win: {fileID: 8300000, guid: cd4b9f384ba0342499411dd267ba5471, type: 3}
