@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private GameObject Spottable;
+    [SerializeField] private List<GameObject> Cars;
     [SerializeField] private float minSpawnTime = 20.0f;
     [SerializeField] private float maxSpawnTime = 35.0f;
 
@@ -27,14 +27,15 @@ public class Spawn : MonoBehaviour
     void Create ()
     {
         //modifier for positive or negative chosen at random
-        int mod = Random.Range (-1, 1);
+        int mod = Random.Range (0, 1);
         Transform sp;
-        if (mod >= 0)
+        if (mod == 0)
             sp = spawnPoints[2];
         else
             sp = spawnPoints[1];
 
-        Instantiate (Spottable, sp);
+        int r = Random.Range (0, Cars.Count);
+        Instantiate (Cars[r], sp);
     }
 
     IEnumerator timer ()
