@@ -51,7 +51,7 @@ public class Spawn : MonoBehaviour
             sp = spawnPoints[1];
 
         int r = Random.Range (0, Cars.Count);
-        Instantiate (Cars[r], sp.position, sp.rotation);
+        Instantiate (Cars[r], sp.position + new Vector3 (0, -1, 0), sp.rotation);
 
         prevmod = mod;
     }
