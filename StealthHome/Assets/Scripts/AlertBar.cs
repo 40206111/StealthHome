@@ -10,6 +10,7 @@ public class AlertBar : MonoBehaviour
     private float timer;
     [SerializeField]
     private Image wedge;
+    public bool dont_track = false;
 
     private const float regenRate = 0.05f;
 
@@ -44,6 +45,8 @@ public class AlertBar : MonoBehaviour
         //make sure Alert level does not exceed 0 or 1
         AlertLevel = Mathf.Clamp(AlertLevel, 0, 1);
         wedge.rectTransform.localPosition = new Vector3(Mathf.Lerp(-34.0f, 34.0f, AlertLevel), wedge.rectTransform.localPosition.y, wedge.rectTransform.localPosition.z);
+        if (dont_track)
+            AlertLevel = 0.0f;
     }
 
    
