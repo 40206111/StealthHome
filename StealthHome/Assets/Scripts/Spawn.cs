@@ -23,7 +23,7 @@ public class Spawn : MonoBehaviour
     private void Update ()
     {
         //follow camera
-        gameObject.transform.position = cam.position;
+        gameObject.transform.position = new Vector3(cam.position.x, cam.position.y, 0.0f);
     }
 
     void Create ()
